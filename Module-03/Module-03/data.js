@@ -6,8 +6,8 @@ module.exports = [
     strong: 'no mercado com esses cursos gratuitos',
     card: '4 módulos | 100 aulas',
     price: 'Gratuito',
-    number: '01'
-
+    number: '01',
+    news: true
   },
   {
     id: 'launchbase',
@@ -25,6 +25,7 @@ module.exports = [
     strong: 'nas tecnologias mais modernas de desenvolvimento web e mobile',
     card: '7 módulos | 100 aulas',
     price: 'Pago',
-    number: '03'
+    number: '03',
+    news: true
   }
 ]
