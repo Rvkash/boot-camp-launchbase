@@ -8,18 +8,18 @@
 
 <main>
   <div class="logo_image">
-    <img src="https://avatars0.githubusercontent.com/u/28929274?s=200&v=4" alt="Logo Rocketseat" />
+    <img src="{{about.avatar_url}}" alt="Logo Rocketseat" />
   </div>
 
-  <h1>Rocketseat</h1>
-  <h2>Instituição educacional | RS</h2>
+  <h1>{{about.name}}</h1>
+  <h2>{{about.rocket}}</h2>
 
   <div class="description">
     <p class="p_rocket">
-      As melhores tecnologias em programação, direto ao ponto e do jeito certo.
+      {{about.role}}
     </p>
     <p>
-      No meio de tanta informação e da quantidade de ferramentas que surgem todos os dias, você precisa de alguém que te leve na direção certa.
+     {{about.description}}
     </p>
   </div>
 
@@ -29,12 +29,9 @@
     </div>
 
       <footer class="nav_links footer">
-        <a href="http://fb.com/rocketseat" target="_blank">Facebook</a>
-        <a href="http://instagram.com/rocketseat_oficial" target="_blank"
-          >Instagram</a
-        >
-        <a href="http://twitter.com/rocketseat" target="_blank">Twitter</a>
-        <a href="http://youtube.com/rocketseat" target="_blank">Youtube</a>
+      {% for link in about.links%}
+        <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+        {% endfor %}
       </footer>
   
     
