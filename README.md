@@ -4,7 +4,7 @@
 
 
 <h3 align="center">
-  Modulo 01 
+  Modulos
 </h3>
 
 ## :rocket: O que é LaunchBase
