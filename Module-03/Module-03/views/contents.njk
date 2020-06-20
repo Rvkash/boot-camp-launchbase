@@ -19,6 +19,9 @@
         </div>
         <div class="card_image">
           <img src="{{item.img}}" alt="Imagem" />
+          {% if item.featured %}
+            <div class="featured">News</div>
+          {% endif %}
         </div>
         <div class="card_content">
           <p>
