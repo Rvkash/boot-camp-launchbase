@@ -1,17 +1,3 @@
-<h1 align="center">
-    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="400px" />
-</h1>
-
-<p align="center"> 
-  <a href="https://opensource.org/licenses/MIT"> 
-    <img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="License MIT"> 
-  </a> 
-</p> 
-<<<<<<< HEAD
-
-=======
->>>>>>> f44736507b0137141a93ba51c28e44c0c1987601
-
 <h3 align="center">
   Modulo 01 
 </h3>
