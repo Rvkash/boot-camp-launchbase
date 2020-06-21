@@ -1,17 +1,18 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 
-const contents = require('./data')
+const courses = require('./data')
 
 const server = express()
 
 server.use(express.static('public'))
 
-server.set('view engine', 'njk')
+server.set('view engine', 'njk') // setar qual é o motor de views da app, qual é a extensão dos arquivos para abrir
 
 nunjucks.configure('views', {
   express: server,
-  autoescape: false
+  autoescape: false,
+  noCache: true
 })
 
 server.get('/', function (req, res) {
@@ -33,10 +34,16 @@ server.get('/', function (req, res) {
   return res.render('about', { about: about })
 })
 
-server.get('/contents', function (req, res) {
-  return res.render('contents', { items: contents })
+server.get('/courses', function (req, res) {
+  return res.render('courses', { items: courses })
 })
 
-server.listen(5000, function () {
+server.get('/courses/:id', function (req, res) {
+  const id = req.params.id
+
+  return res.render('course', { id })
+})
+
+server.listen(5001, function () {
   console.log('Server online')
 })
