@@ -229,56 +229,26 @@ main h2 {
   border-radius: 4px;
 }
 
-.modal_overlay {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #000000bb;
-  opacity: 0;
-  visibility: hidden;
-}
 
-.active {
-  opacity: 1;
-  visibility: visible;
-}
+/*====== Featured ========*/
 
-.modal {
-  width: 90%;
-  height: 90%;
-  margin: 5vh auto;
-  background-color: #fff;
-  border-radius: 8px;
+.news-news.card_image {
   position: relative;
 }
 
-.icons {
-  color: #7159c1;
+.news {
+  background: #abfd13;
+  padding: 2px 8px;
   position: absolute;
-  display: flex;
-  align-items: flex-start;
-  top: 16px;
-  right: 16px;
-}
-
-.icons span {
-  cursor: pointer;
-}
-
-.material-icons {
-  margin: 0 8px;
+  right: 200px;
+  border-radius: 16px;
+  top: -162px;
 }
 
 iframe {
   width: 100%;
-  height: 90%;
-  margin-top: 4%;
+  height: 100%;
+  position: relative;
 }
 
-.maximize {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-radius: 0;
-}
+
