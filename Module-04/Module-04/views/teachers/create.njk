@@ -1,0 +1,69 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<link rel="stylesheet" href="/styles.css" />
+
+<form class="card" 	method="POST" action='/teachers'>
+	<section class="avatar"
+	 style="background: url(https://source.unsplash.com/collection/8969654/500x500) no-repeat center center /cover"></section>
+
+		<section class="details">
+				<h3>New teacher</h3>
+
+				<div class="item">
+					<div> Avatar Url </div>
+					<div>
+						<input type="url"
+						 name="avatar_url"
+						 placeholder="http://example.com"
+						 >
+					</div>
+				</div>
+
+				<div class="item">
+					<div> Name </div>
+					<div>
+						<input 
+						type="text" 
+						name="name"
+						placeholder="Ex: Robert Smith"
+
+						>
+					</div>
+				</div>
+
+				<div class="item">
+					<div> Date of born</div>
+					<div>
+						<input 
+						type="date" 
+						name="birth" 
+						>
+					</div>
+				</div>
+
+				<div class="item">
+					<div> Sex </div>
+					<div>
+						<span><input type="radio" name="gender" value="M" checked>Male</span>
+						<span><input type="radio" name="gender" value="F" checked>Female</span>
+					</div>
+				</div>
+
+				<div class="item">
+					<div> Occupation area </div>
+						<input 
+						type="text" 
+						name="services"
+						placeholder="Ex: Instructor, Dance "
+						>
+				</div>
+
+				<button type="submit">Submit</button>
+
+
+		</section>
+</form>
+
+{% endblock content %}
+
