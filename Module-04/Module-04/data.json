@@ -1,0 +1,31 @@
+{
+  "teachers": [
+    {
+      "avatar_url": "http://google.com",
+      "birth": -27080352000000,
+      "created_at": 1593109401982,
+      "id": 1,
+      "gender": "M",
+      "services": "Dance",
+      "name": "Rafael"
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Rafael",
+      "birth": -27080352000000,
+      "gender": "M",
+      "services": "Dance",
+      "created_at": 1593109525525
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://google.com",
+      "name": "Rafael",
+      "birth": -27080352000000,
+      "gender": "M",
+      "services": "Dance",
+      "created_at": 1593109531242
+    }
+  ]
+}
