@@ -138,7 +138,7 @@ header  {
 
 .details .item span {
   padding: 8px 16px;
-  background-color: var(--secondary-color);
+  background-color: #C8E9A0;
   border-radius: 16px;
   color: #777;
   margin-right: 4px;
@@ -148,3 +148,34 @@ header  {
   font-size: 12px;
 }
 
+/* Form */
+
+input {
+  width: 100%;
+  outline: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+
+input::placeholder {
+  font-size: 16;
+  font-weight: normal;
+}
+
+button[type="submit"] {
+  padding: 8px 32px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%
+
+
+}
