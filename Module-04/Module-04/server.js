@@ -3,7 +3,8 @@ const nunjucks = require('nunjucks')
 const routes = require('./routes')
 
 const server = express()
-
+/* middleware pra funcionar o req.body */
+server.use(express.urlencoded({ extended: true }))
 server.use(express.static('public'))
 server.use(routes)
 
@@ -16,5 +17,5 @@ nunjucks.configure('views', {
 })
 
 server.listen(5000, function () {
-  console.log('Server online')
+  console.log('Server ta on')
 })
