@@ -20,15 +20,17 @@
 				</div>
 
 				<div class="item">
-					<div> Sex </div>
-					<div> {{ teacher.gender }} </div>
+					<div> Sex </div> 
+					<div> {{ "Masculino" if  teacher.gender == "M" else "Feminino"}} </div> 
 				</div>
 
 				<div class="item">
-					{% for service in services %}
 						<div> Occupation Area </div>
+						<div>
+							{% for service in teacher.services %}
 						<span>{{ service }}</span>
-						{% endfor%}
+							{% endfor %}
+						</div>
 				</div>
 
 				<div class="item">
