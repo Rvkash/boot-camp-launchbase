@@ -2,6 +2,29 @@
 const fs = require('fs')
 const data = require('./data.json')
 
+// req.query = id=?
+// req.body = corpo
+// req.params = /:id/members
+
+exports.show = function (req, res) {
+  const { id } = req.params // destruturação
+
+  const foundTeacher = data.teachers.find(function (teacher) { // encontrando teacher do data // achou o array de teachers passar o teacher no momento.
+    return teacher.id == id // find retorna true ou false
+  })
+
+  if (!foundTeacher) return res.send('Teacher not found') // se não encontrar o teacher
+
+  const teacher = { // Mandando pro front
+    ...foundTeacher, // Espalhando o foundteacher
+    age: '',
+    services: foundTeacher.services.split(','), // Procurando array e quebrando com a virgula .split
+    created_at: ''
+  }
+
+  return res.render('teachers/show', { teacher })
+}
+
 exports.post = function (req, res) {
   // req.query  // req.body
 
@@ -19,6 +42,7 @@ exports.post = function (req, res) {
   birth = Date.parse(birth)
   const created_at = Date.now()
   const id = Number(data.teachers.length + 1)
+
   // [...] push > [{...}] - push > construindo o array do data.json
 
   data.teachers.push({
@@ -36,7 +60,7 @@ exports.post = function (req, res) {
   // Callback function
   fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
     if (err) return res.send('Write file error')
-    return res.redirect('/student')
+    return res.redirect('/teachers')
   })
 
   // return res.send(req.body)
