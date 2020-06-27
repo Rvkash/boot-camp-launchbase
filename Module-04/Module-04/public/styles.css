@@ -3,6 +3,7 @@
   :root {
     --primary-color: #7159c1;
     --secondary-color: #f7DF1E;
+    --third-color: #ed6a5a;
   }
 
  *{
@@ -12,7 +13,7 @@
  }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--third-color);
   font-family: 'Roboto', 'sans-serif';
 }
 
@@ -79,7 +80,7 @@ header  {
   margin: 45 auto;        
   grid-template-columns: 1fr 1fr;
   /* somba */
-  box-shadow: 0px 2px 6px -2px rgb(0, 0, 0, 20);
+  box-shadow: 0px 2px 6px -2px rgb(0, 0, 1, 22);
 
   /* animação */
   animation-name: up;
@@ -168,7 +169,8 @@ input::placeholder {
   font-weight: normal;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button  {
   padding: 8px 32px;
   background-color: var(--primary-color);
   color: white;
@@ -178,4 +180,11 @@ button[type="submit"] {
   width: 100%
 
 
+}
+
+a.button {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
 }
