@@ -3,20 +3,23 @@
 {% block content %}
 <link rel="stylesheet" href="/styles.css" />
 
-<form class="card" 	method="POST" action='/teachers'>
+<form class="card" 	method="POST" action='/teachers?_method=PUT'> 
 	<section class="avatar"
 	 style="background: url(https://source.unsplash.com/collection/8969654/500x500) no-repeat center center /cover">
 	</section>
 
 		<section class="details">
-				<h3>New teacher</h3>
+				<h3>Edit teacher</h3>
 
-		
-
+	
 				{% include 'teachers/fields.njk' %}
-				
 
-				
+
+					<input 
+						type="hidden" 
+						name="id" 
+						value={{teacher.id}}>
+					
 
 
 		</section>
