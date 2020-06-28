@@ -12,9 +12,7 @@ routes.get('/', function (req, res) {
   return res.redirect('/teachers')
 })
 
-routes.get('/teachers', function (req, res) { // mesmo caminho usando verbos diferentes
-  return res.render('teachers/index')
-})
+routes.get('/teachers', teachers.index)
 
 routes.get('/teachers/create', function (req, res) {
   return res.render('teachers/create')
@@ -27,6 +25,8 @@ routes.get('/teachers/:id/edit', teachers.edit)
 routes.post('/teachers', teachers.post) // mesmo caminho usando verbos diferentes
 
 routes.put('/teachers', teachers.put) // mesmo caminho usando verbos diferentes
+
+routes.delete('/teachers', teachers.delete)
 
 routes.get('/student', function (req, res) {
   return res.send('student')
