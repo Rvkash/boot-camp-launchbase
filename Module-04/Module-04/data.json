@@ -1,31 +1,33 @@
 {
+  "students": [],
+  
   "teachers": [
     {
-      "avatar_url": "http://google.com",
-      "birth": -27080352000000,
+      "avatar_url": "https://images.unsplash.com/photo-1587613863965-74d82b39ef79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "birth": 1005350400000,
       "created_at": 1593109401982,
       "id": 1,
-      "gender": "M",
+      "gender": "==",
       "services": "Dance",
-      "name": "Rafael"
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://google.com",
-      "name": "Rafael",
-      "birth": -27080352000000,
-      "gender": "M",
-      "services": "Dance",
-      "created_at": 1593109525525
+      "name": "Rafaela"
     },
     {
       "id": 3,
       "avatar_url": "http://google.com",
-      "name": "Rafael",
+      "name": "Rodrigo Silva",
       "birth": -27080352000000,
-      "gender": "M",
+      "gender": "==",
       "services": "Dance",
       "created_at": 1593109531242
+    },
+    {
+      "id": 4,
+      "avatar_url": "http://google.com",
+      "name": "Josh nickels",
+      "birth": 827193600000,
+      "gender": "M",
+      "services": "Instructor",
+      "created_at": 1593196454311
     }
   ]
 }
