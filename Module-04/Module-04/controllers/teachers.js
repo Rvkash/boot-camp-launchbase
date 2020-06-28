@@ -3,32 +3,14 @@ const fs = require('fs')
 const data = require('../data.json')
 const { age, date } = require('../utils')
 
-exports.index = function (req, res) {
-  return res.render('teachers/index', { teachers: data.teachers })
-}
-
 // req.query = id=?
 // req.body = corpo
 // req.params = /:id/members
 
 // show //create //edit // put
-exports.show = function (req, res) {
-  const { id } = req.params // destruturação
 
-  const foundTeacher = data.teachers.find(function (teacher) { // encontrando teacher do data // achou o array de teachers passar o teacher no momento.
-    return teacher.id == id // find retorna true ou false
-  })
-
-  if (!foundTeacher) return res.send('Teacher not found') // se não encontrar o teacher
-
-  const teacher = { // Mandando pro front
-    ...foundTeacher, // Espalhando o foundteacher
-    age: age(foundTeacher.birth),
-    services: foundTeacher.services.split(','), // Procurando array e quebrando com a virgula .split
-    created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
-  }
-
-  return res.render('teachers/show', { teacher })
+exports.index = function (req, res) {
+  return res.render('teachers/index', { teachers: data.teachers })
 }
 
 exports.create = function (req, res) {
@@ -78,6 +60,25 @@ exports.post = function (req, res) {
   // return res.send(req.body)
 }
 
+exports.show = function (req, res) {
+  const { id } = req.params // destruturação
+
+  const foundTeacher = data.teachers.find(function (teacher) { // encontrando teacher do data // achou o array de teachers passar o teacher no momento.
+    return teacher.id == id // find retorna true ou false
+  })
+
+  if (!foundTeacher) return res.send('Teacher not found') // se não encontrar o teacher
+
+  const teacher = { // Mandando pro front
+    ...foundTeacher, // Espalhando o foundteacher
+    age: age(foundTeacher.birth),
+    services: foundTeacher.services.split(','), // Procurando array e quebrando com a virgula .split
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
+  }
+
+  return res.render('teachers/show', { teacher })
+}
+
 exports.edit = function (req, res) {
   const { id } = req.params // destruturação
 
@@ -89,7 +90,7 @@ exports.edit = function (req, res) {
 
   const teacher = {
     ...foundTeacher,
-    birth: date(foundTeacher.birth)
+    birth: date(foundTeacher.birth).iso
   }
 
   return res.render('teachers/edit', { teacher })

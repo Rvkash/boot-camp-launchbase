@@ -1,7 +1,7 @@
 // post
 const fs = require('fs')
 const data = require('../data.json')
-const { age, date } = require('../utils')
+const { date } = require('../utils')
 
 exports.index = function (req, res) {
   return res.render('students/index', { students: data.students })
@@ -22,7 +22,7 @@ exports.show = function (req, res) {
 
   const student = { // Mandando pro front
     ...foundStudent, // Espalhando o foundStudent
-    age: age(foundStudent.birth)
+    birth: date(foundStudent.birth).birthDay
   }
 
   return res.render('students/show', { student })
@@ -44,22 +44,21 @@ exports.post = function (req, res) {
     }
   }
 
-  let { avatar_url, birth, name, services, gender } = req.body
+  birth = Date.parse(req.body.birth)
 
-  birth = Date.parse(birth)
-  const created_at = Date.now()
-  const id = Number(data.students.length + 1)
+  let id = 1
+  const lastStudent = data.students[data.students.length - 1]
+
+  if (lastStudent) {
+    id = lastStudent.id + 1
+  }
 
   // [...] push > [{...}] - push > construindo o array do data.json
 
   data.students.push({
+    ...req.body,
     id,
-    avatar_url,
-    name,
-    birth,
-    gender,
-    services,
-    created_at
+    birth
   })
 
   // Utilizando um database direto do node fs - uma function dentro de outra
@@ -69,7 +68,7 @@ exports.post = function (req, res) {
     if (err) {
       return res.send('Write file error')
     }
-    return res.redirect('/students')
+    return res.redirect(`/students/${id}`)
   })
 
   // return res.send(req.body)
@@ -86,7 +85,7 @@ exports.edit = function (req, res) {
 
   const student = {
     ...foundStudent,
-    birth: date(foundStudent.birth)
+    birth: date(foundStudent.birth).iso
   }
 
   return res.render('students/edit', { student })
