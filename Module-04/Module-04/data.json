@@ -1,33 +1,32 @@
 {
   "students": [],
-  
   "teachers": [
     {
-      "avatar_url": "https://images.unsplash.com/photo-1587613863965-74d82b39ef79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "birth": 1005350400000,
+      "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "birth": 1005609600000,
       "created_at": 1593109401982,
       "id": 1,
       "gender": "==",
-      "services": "Dance",
-      "name": "Rafaela"
+      "services": "English teacher",
+      "name": "Rafaela Silva"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://pbs.twimg.com/profile_images/1190279367429148672/qbeF0cUT_400x400.jpg",
+      "name": "Mayk Brito",
+      "birth": 480038400000,
+      "gender": "==",
+      "services": "Dev Instructor Launchbase",
+      "created_at": 1593375569846
     },
     {
       "id": 3,
-      "avatar_url": "http://google.com",
-      "name": "Rodrigo Silva",
-      "birth": -27080352000000,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2254731?s=460&u=c34dfbafb54d6bb7c3f715ebe93a811cc7355771&v=4",
+      "name": "Diego Fernandes",
+      "birth": 764035200000,
       "gender": "==",
-      "services": "Dance",
-      "created_at": 1593109531242
-    },
-    {
-      "id": 4,
-      "avatar_url": "http://google.com",
-      "name": "Josh nickels",
-      "birth": 827193600000,
-      "gender": "M",
-      "services": "Instructor",
-      "created_at": 1593196454311
+      "services": "Dev Instructor GoStack",
+      "created_at": 1593377234645
     }
   ]
 }
