@@ -5,7 +5,7 @@
 
 <div class="card">
 			<section class="avatar"
-				style="background: url(https://source.unsplash.com/collection/8969654/500x500) no-repeat center center /cover">
+				style="background: url({{teacher.avatar_url}}) no-repeat center center /cover">
 			</section>
 
 	<section class="details">
@@ -26,6 +26,17 @@
 			<input type="hidden" name="id" value="{{ teacher.id}}">
 			<button type="submit">Delete</button>
 		</form>
+
+		<script>
+			 const formDelete = document.querySelector("#form-delete")
+			 formDelete.addEventListener("submit", function(event) {
+					const confirmation = confirm("Confirm Delete?")
+					if(!confirmation) {
+						event.preventDefault()
+							
+					}
+			 })
+		</script>
 
 	</section>
 </div>
