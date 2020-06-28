@@ -4,41 +4,48 @@
 
 <div class="card">
 	<section class="avatar"
-	 style="background: url({{ teacher.avatar_url }}) no-repeat center center /cover"></section>
+	 style="background: url({{ student.avatar_url }}) no-repeat center center /cover"></section>
 
 		<section class="details">
 				<h3>Detalhes</h3>
 
 				<div class="item">
 					<div> Name </div>
-					<div> {{ teacher.name }} </div>
+					<div> {{ student.name }} </div>
+				</div>
+
+					<div class="item">
+					<div> Email </div>
+					<div> {{ student.email }} </div>
 				</div>
 
 				<div class="item">
-					<div> Years </div>
-					<div> {{ teacher.age }} </div>
+					<div> Student Birthday </div>
+					<div> {{ student.birth }} </div>
 				</div>
 
 				<div class="item">
 					<div> Sex </div> 
-					<div> {{ "Male" if  teacher.gender == "M" else "Female"}} </div> 
+					<div> {{ "Male" if  student.gender == "M" else "Female"}} </div> 
 				</div>
 
-				<div class="item">
-						<div> Occupation Area </div>
-						<div>
-							{% for service in teacher.services %}
-						<span>{{ service }}</span>
-							{% endfor %}
-						</div>
-				</div>
 
 				<div class="item">
-					<div> Data </div>
-						<div>{{ teacher.created_at }}</div>
+					<div> Blood </div>
+						<div>{{ student.blood }}</div>
 					</div>
 
-					<a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
+				<div class="item">
+					<div> Class </div>
+						<div>{{ student.class }}</div>
+					</div>
+
+						<div class="item">
+					<div> Turn </div>
+						<div>{{ student.turn }}</div>
+					</div>
+
+					<a href="/students/{{ student.id }}/edit" class="button">Editar</a>
 				
 
 		</section>
