@@ -3,6 +3,10 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age, date } = require('./utils')
 
+exports.index = function (req, res) {
+  return res.render('teachers/index', { teachers: data.teachers })
+}
+
 // req.query = id=?
 // req.body = corpo
 // req.params = /:id/members
@@ -112,5 +116,22 @@ exports.put = function (req, res) {
     if (err) return res.send('Write error')
 
     return res.redirect(`/teachers/${id}`)
+  })
+}
+
+exports.delete = function (req, res) {
+  const { id } = req.body
+
+  // estrutura de repetiçao retorna true ou false
+  const filteredTeachers = data.teachers.filter(function (teacher) {
+    return teacher.id != id
+  })
+
+  data.teachers = filteredTeachers
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+    if (err) return res.send('write file error')
+
+    return res.redirect('/teachers')
   })
 }
