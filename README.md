@@ -24,6 +24,7 @@ LaunchBase é um treinamento bootcamp imersivo para devs ministrado pela institu
 Este projeto está sob licença MIT, para mais detalhes verifique em [LICENSE](https://github.com/Rvkash/bootcamp-LaunchBase-desafios01/blob/master/LICENSE)
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
     
  Feito com :heart: [Rafael Linhares](https://www.linkedin.com/in/rafael-linhares-js/)
  
