@@ -26,6 +26,6 @@ Este projeto está sob licença MIT, para mais detalhes verifique em [LICENSE](h
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
     
- Feito com :heart: [Rafael Linhares](https://www.linkedin.com/in/rafael-linhares-js/)
+ Feito com :heart: por [Rafael Linhares](https://www.linkedin.com/in/rafael-linhares-js/)
  
 
