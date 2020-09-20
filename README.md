@@ -19,6 +19,7 @@ LaunchBase é um treinamento bootcamp imersivo para devs ministrado pela institu
 - MySQL
 - Nunjucks
 - Express
+- Postgres
 
 ## :key: Licença
 Este projeto está sob licença MIT, para mais detalhes verifique em [LICENSE](https://github.com/Rvkash/bootcamp-LaunchBase-desafios01/blob/master/LICENSE)
